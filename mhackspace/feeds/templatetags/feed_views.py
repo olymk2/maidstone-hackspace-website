@@ -4,6 +4,7 @@ from mhackspace.feeds.models import Article
 
 register = template.Library()
 
+
 @register.inclusion_tag('feeds/list.html')
 def show_feeds():
-    return {'articles': Article.objects.filter(displayed=True)}
+    return {'articles': Article.objects.filter(displayed=True).select_related('feed')}
