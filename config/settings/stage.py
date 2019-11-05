@@ -121,13 +121,13 @@ LOGGING = {
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins', 'console', 'logfile'],
+            'handlers': ['console', 'logfile'],
             'level': 'ERROR',
             'propagate': True
         },
         'django.security.DisallowedHost': {
             'level': 'ERROR',
-            'handlers': ['logfile', 'console', 'mail_admins'],
+            'handlers': ['logfile', 'console'],
             'propagate': True
         }
     }
